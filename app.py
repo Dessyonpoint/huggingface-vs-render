@@ -4,8 +4,9 @@ import os
 app = FastAPI()
 
 @app.get("/")
+@app.head("/")  # Add HEAD method support for health checks
 def read_root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World", "status": "ok"}
 
 if __name__ == "__main__":
     import uvicorn
