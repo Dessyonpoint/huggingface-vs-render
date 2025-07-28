@@ -1,6 +1,5 @@
 from huggingface_hub import hf_hub_download
 import torch
-from model import AutoFillEmbeddingNN  # This is required
 
 # Define same config used during training
 n_service = 100
