@@ -7,3 +7,4 @@ joblib==1.5.1
 requests==2.32.4
 python-multipart==0.0.20
 gunicorngunicorn 
+gunicorn
