@@ -1,0 +1,21 @@
+# Ignore virtualenv
+venv/
+
+# Ignore large model and data files
+*.pth
+*.pt
+*.pkl
+*.zip
+*.tar
+*.tar.gz
+*.csv
+*.npy
+
+# Ignore notebooks and dev files
+*.ipynb
+.ipynb_checkpoints/
+notebooks/
+__pycache__/
+data/
+datasets/
+logs/

@@ -1,0 +1,18 @@
+# Ignore virtualenv
+venv/
+.env
+*.env
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Ignore logs and temp
+*.log
+.DS_Store
