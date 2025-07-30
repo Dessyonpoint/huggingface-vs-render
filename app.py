@@ -22,7 +22,7 @@ LOCAL_JOB_TYPES = [
     "Computer Repairer", "Solar Installer", "CCTV Installer", "Internet Technician",
     "Site Labourer", "Site Supervisor", "Scaffolder", "Plasterer", "POS Agent",
     "Dispatch Rider", "Market Delivery Agent", "Shoemaker", "Dry Cleaner",
-    "Waste Collector"
+    "Waste Collector", "Real Estate Agent", "Property Agent", "Realtor", "Housing Agent"
 ]
 
 # Pydantic models for structured responses
@@ -89,10 +89,14 @@ def generate_sample_workers():
                 skills.extend(["Navigation", "Vehicle Maintenance"])
             if job_type in ["Cleaner", "Housekeeper", "Nanny"]:
                 skills.extend(["Home Management", "Organization"])
+            if job_type in ["Real Estate Agent", "Property Agent", "Realtor", "Housing Agent"]:
+                skills.extend(["Property Valuation", "Customer Relations", "Market Analysis", "Negotiation"])
             
             # Generate rates based on job type complexity
             if job_type in ["Generator Repair Technician", "Solar Installer", "CCTV Installer", "Site Supervisor"]:
                 hourly_rate = random.uniform(35, 80)
+            elif job_type in ["Real Estate Agent", "Property Agent", "Realtor", "Housing Agent"]:
+                hourly_rate = random.uniform(50, 120)  # Commission-based but showing hourly consultation rates
             elif job_type in ["Electrician", "Plumber", "Mechanic", "AC Installer"]:
                 hourly_rate = random.uniform(25, 60)
             elif job_type in ["Carpenter", "Welder", "Mason", "Painter", "Tiler"]:
